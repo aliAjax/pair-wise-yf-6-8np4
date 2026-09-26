@@ -300,3 +300,265 @@ textarea {
     padding: 14px;
   }
 }
+
+/* ---- 页签与提示条 ---- */
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin: 0 auto 16px;
+  max-width: 1240px;
+}
+
+.tab {
+  background: #e9eee6;
+  border-radius: 8px;
+  color: #526056;
+  font-weight: 800;
+  padding: 10px 18px;
+}
+
+.tab.active {
+  background: #526d4e;
+  color: white;
+}
+
+.flash {
+  border-radius: 8px;
+  font-weight: 700;
+  margin: 0 auto 16px;
+  max-width: 1240px;
+  padding: 12px 14px;
+}
+
+.flash.error {
+  background: #f7dcd4;
+  border: 1px solid #e5b3a5;
+  color: #7c3524;
+}
+
+.flash.ok {
+  background: #dcebd9;
+  border: 1px solid #b9d6b4;
+  color: #2f5d2c;
+}
+
+.hint {
+  color: #828a80;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.hint.warn {
+  color: #9a5a2b;
+  font-weight: 700;
+}
+
+/* ---- 维修卡片内的账目区 ---- */
+
+.ledger-box {
+  border-top: 1px dashed #dde1d9;
+  display: grid;
+  gap: 10px;
+  padding-top: 10px;
+}
+
+.inline-form {
+  background: #f6f8f3;
+  border: 1px solid #dde1d9;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.grid-3 {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-2 {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.primary.sm {
+  min-height: 36px;
+  padding: 7px 12px;
+}
+
+.ghost:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.chip.strong {
+  background: #526d4e;
+  color: white;
+}
+
+.chip.pending {
+  background: #dde8f2;
+  color: #315674;
+}
+
+.chip.reimbursed {
+  background: #d8ead6;
+  color: #376336;
+}
+
+.chip.available {
+  background: #f4deb4;
+  color: #694c21;
+}
+
+/* ---- 报销记录 ---- */
+
+.claims {
+  display: grid;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.claim {
+  background: #fbfcf9;
+  border: 1px solid #e3e7de;
+  border-radius: 8px;
+  display: grid;
+  gap: 6px;
+  padding: 10px 12px;
+}
+
+.claim-main {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.claim-sub {
+  color: #687166;
+  font-size: 0.82rem;
+}
+
+.time {
+  color: #8a9188;
+  font-size: 0.78rem;
+}
+
+.claim-status {
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 3px 9px;
+  white-space: nowrap;
+}
+
+.claim-status.pending {
+  background: #dde8f2;
+  color: #315674;
+}
+
+.claim-status.reimbursed,
+.claim-status.active {
+  background: #d8ead6;
+  color: #376336;
+}
+
+.claim-status.rejected {
+  background: #eadbd7;
+  color: #783d34;
+}
+
+.claim-status.canceled,
+.claim-status.replaced {
+  background: #e4e8df;
+  color: #6a7268;
+}
+
+/* ---- 报销流水页 ---- */
+
+.ledger {
+  display: grid;
+  gap: 16px;
+  margin: 0 auto;
+  max-width: 1240px;
+}
+
+.ledger-stats {
+  grid-template-columns: repeat(5, minmax(110px, 1fr));
+}
+
+.ledger-stats .stat strong {
+  font-size: 1.3rem;
+}
+
+.panel-head {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.panel-head h2 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.panel .hint {
+  margin-bottom: 12px;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border-bottom: 1px solid #e6eae2;
+  padding: 9px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  color: #687166;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+td {
+  font-size: 0.88rem;
+}
+
+.amount-cell {
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .ledger-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 620px) {
+  .grid-3,
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
